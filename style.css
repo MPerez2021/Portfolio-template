@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-padding-top: 4rem;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--font);
+    color: var(--font-color);
+    height: 100vh;
+    max-width: 100vw;
+}
+
+:root {
+    --bg-color: #000;
+    --font-color: #fff;
+    --secondary-bg-color: #ff4900;
+    --font: "Poppins";
+}
+.container {
+    padding: 0rem 12rem 0 12rem;
+}
+
+/* ------- HEADER -------- */
+.navbar {
+    padding: 0 12rem 0 12rem;
+}
+.logo img {
+    width: 120px;
+    height: auto;
+    margin-top: 1rem;
+}
+
+.header__info ul li {
+    padding: 2.5rem 1.2rem 1rem 1.2rem;
+}
+
+.hireMe__button button {
+    background-color: var(--secondary-bg-color);
+    color: var(--font-color);
+    font-family: var(--font);
+    padding: 1rem 1.5rem;
+    border-color: unset;
+    border-width: 0;
+}
+
+.header__info ul li:hover {
+    background-color: var(--secondary-bg-color);
+}
+
+/* ------- HOME -------- */
+
+.home__page {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url(./assets/foto-perfil.png);
+    background-repeat: no-repeat;
+    background-size: auto 90%;
+    background-position: 400px bottom;
+}
+.message__bubble {
+    display: inline-block;
+    position: relative;
+    width: 180px;
+    height: auto;
+    background-color: var(--secondary-bg-color);
+}
+.triangle:after {
+    content: "";
+    position: absolute;
+    left: 40%;
+    border: 15px solid;
+    border-color: var(--secondary-bg-color) transparent transparent transparent;
+}
+
+.message__text {
+    padding: 1rem;
+}
+
+.home__buttons button {
+    padding: 1rem 2rem;
+    color: var(--font-color);
+}
+
+.home__buttons button:first-child {
+    background-color: var(--secondary-bg-color);
+    font-family: var(--font);
+    font-size: .9rem;
+
+}
+.home__buttons button:nth-child(2) {
+    background-color: transparent;
+    border-color: #fff;
+    border-width: thin;
+    font-family: var(--font);
+    font-size: .9rem;
+}
+
+/* ------- ABOUT ME -------- */
+
+.about__me{
+    padding-top: 81px;
+}
+
+.about__me .image img{
+    height: 100%;
+    width: 100%;
+    filter: grayscale(1);
+}
+
+.progress__bar {
+    width: 100%;
+    height: .2rem;
+    position: relative;
+    background-color: #707070;
+  }
+  
+  .progress__bar span {
+    height: 100%;
+    position: absolute;
+  }
+  .progress__wordpress span {
+    background-color: #FF4900;
+    width: 100%;
+  }
+  .progress__html span {
+    background-color: #FF7004;
+    width: 75%;
+
+  }
+  .progress__angular span {
+    background-color: #FF9809;
+    width: 80%;
+  }
+  .progress__reactJs span {
+    background-color: #FF9809;
+    width: 95%;
+  }
+
+/* ------- SERVICES -------- */
+
+.services{
+    padding-top: 81px;
+}
+.card{
+    background-color: #111111;
+    transition: all .2s ease-in;
+
+}
+.service__logo{
+    height: 60px;
+    width: 60px;
+    background-color: #000;
+    border-radius: 50%;
+    transition: all .2s ease-in;
+}
+.service__logo i{
+    font-size: x-large;
+    transition: all .2s ease-in;
+}
+
+.card:hover{
+    background-color: var(--secondary-bg-color);
+}
+.card:hover .service__logo{
+    background-color: #fff;
+
+}
+.card:hover .service__logo i{
+    color: #000;
+
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/primeflex@^3/primeflex.css" />
+    <link rel="stylesheet" href="https://unpkg.com/primeflex/themes/saga-blue.css" />
+
+    <script src="https://kit.fontawesome.com/b3f17f1dac.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="flex w-full fixed top-0 z-1">
+        <nav class="flex justify-content-between navbar w-full">
+            <span class="logo flex align-items-end">
+                <img src="./assets/Logo.png" width="10" height="10" alt="Logo portafolio personal" />
+            </span>
+            <div class="header__info flex align-items-center gap-3">
+                <ul class="flex list-none">
+                    <li>Sobre mí</li>
+                    <li>Servicios</li>
+                    <li>Portafolio</li>
+                    <li>Blog</li>
+                    <li>Contacto</li>
+                </ul>
+                <div class="hireMe__button pt-4">
+                    <button class="cursor-pointer border-round-lg">Contratame</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--HOME PAGE -->
+    <div class="container">
+        <section class="home__page flex flex-column justify-content-center">
+            <div class="message__bubble triangle mb-2">
+                <div class="message__text text-center">
+                    <p>Hola, Yo soy</p>
+                </div>
+            </div>
+            <h1 class="text-7xl">Mr. John Walker</h1>
+            <p class="text-gray-500">
+                Profesional en desarrollo web y diseñador UI/UX
+            </p>
+            <div class="home__buttons flex gap-2 mt-6">
+                <button class="cursor-pointer border-round-lg">Descargar CV</button>
+                <button class="cursor-pointer border-round-lg">Mi trabajo</button>
+            </div>
+        </section>
+        <!--ABOUT ME-->
+        <section class="about__me w-full min-h-screen flex align-items-center">
+            <div class="aboutMe__content min-h-full flex ">
+                <div class="image col-6 p-0">
+                    <img src="./assets/freelancer.jpg" alt="Foto relacionado a acerca de mí" width="100" height="100" />
+                </div>
+                <div class="aboutMe__info col pt-0 pl-6 pr-6 p-0">
+                    <h1>Sobre mí</h1>
+                    <p class="text-gray-500">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+                        corporis eos itaque delectus modi at, ex tempora harum magni id
+                        quo quod dolor maiores omnis. Laudantium voluptate dignissimos
+                        quia suscipit?.
+                    </p>
+                    <div class="knowledge flex flex-column gap-3 mt-5">
+                        <p>Wordpress 100%</p>
+                        <div class="progress__bar progress__wordpress">
+                            <span data-progress="45"></span>
+                        </div>
+                        <p>HTML 75%</p>
+                        <div class="progress__bar progress__html">
+                            <span data-progress="60"></span>
+                        </div>
+                        <p>Angular 80%</p>
+
+                        <div class="progress__bar progress__angular">
+                            <span data-progress="70"></span>
+                        </div>
+                        <p>React Js 95%</p>
+                        <div class="progress__bar progress__reactJs">
+                            <span data-progress="85"></span>
+                        </div>
+                    </div>
+                    <div class="hireMe__button pt-4">
+                        <button class="cursor-pointer border-round-lg">Contratame!</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--SERVICES -->
+        <section class="services min-h-full w-full pb-7">
+            <div class="services__title flex flex-column gap-3 text-center">
+                <h1>Mis servicios</h1>
+                <p class="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, veniam
+                    impedit! Porro voluptate
+                    veritatis iusto repellat. Laboriosam voluptate accusantium amet qui, neque nesciunt, maxime
+                    explicabo ea
+                    vero aut maiores praesentium.</p>
+            </div>
+            <div class="services__cards w-full grid grid-nogutter mt-7 gap-5">
+                <div class="card flex align-items-center col-4 gap-3 p-2">
+                    <div class="service__logo flex align-items-center justify-content-center">
+                        <i class="fa-brands fa-html5"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>HTML</p>
+                    </div>
+                </div>
+                <div class="card flex align-items-center col-4 gap-3 p-2">
+                    <div class="service__logo flex align-items-center justify-content-center ">
+                        <i class="fa-brands fa-wordpress"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>Wordpress</p>
+                    </div>
+                </div>
+                <div class="card flex align-items-center col gap-3 p-2">
+                    <div class="service__logo flex align-items-center justify-content-center ">
+                        <i class="fa-brands fa-angular"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>Angular</p>
+                    </div>
+                </div>
+                <div class="card flex align-items-center col-4 gap-3 p-2">
+                    <div class="service__logo flex align-items-center justify-content-center ">
+                        <i class="fa-brands fa-react"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>React Js</p>
+                    </div>
+                </div> <div class="card flex align-items-center col-4 gap-3 p-2">
+                    <div class="service__logo flex align-items-center justify-content-center ">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>Desarrollo Móvil</p>
+                    </div>
+                </div> <div class="card flex align-items-center col gap-3 p-2">
+                    <div class="service__logo flex align-items-center justify-content-center ">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>Desarrollo web</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--PORTFOLIO -->
+
+        <!--FREE LANCER SECTION -->
+
+        <!--FOOTER -->
+    </div>
+</body>
+
+</html>
