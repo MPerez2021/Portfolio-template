@@ -17,48 +17,46 @@
     <!-- HEADER -->
     <header class="flex w-full fixed top-0 z-1">
         <nav class="flex justify-content-between navbar w-full">
-            <span class="logo flex align-items-end">
+            <span onclick="scrollToSection('home')" class="logo cursor-pointer flex align-items-end">
                 <img src="./assets/Logo.png" width="10" height="10" alt="Logo portafolio personal" />
             </span>
             <div class="header__info flex align-items-center gap-3">
                 <ul class="flex list-none">
-                    <li>Sobre mí</li>
-                    <li>Servicios</li>
-                    <li>Portafolio</li>
-                    <li>Blog</li>
-                    <li>Contacto</li>
+                    <li onclick="scrollToSection('about')">Sobre mí</li>
+                    <li onclick="scrollToSection('services')">Servicios</li>
+                    <li onclick="scrollToSection('portfolio')">Portafolio</li>
+                    <li onclick="scrollToSection('contact')">Contacto</li>
                 </ul>
                 <div class="hireMe__button pt-4">
-                    <button class="cursor-pointer border-round-lg">Contratame</button>
+                    <a href="mailTo:john@email.com" class="cursor-pointer no-underline border-round-lg">Contratame</a>
                 </div>
             </div>
         </nav>
     </header>
     <!--HOME PAGE -->
     <div class="container">
-        <section class="home__page flex flex-column justify-content-center">
-            <div class="message__bubble triangle mb-2">
-                <div class="message__text text-center">
+        <section id="home" class="home__page flex flex-column justify-content-center">
+            <div class="message__bubble triangle mb-4 md:mb-2">
+                <div class="message__text p-2 sm:p-3 text-center">
                     <p>Hola, Yo soy</p>
                 </div>
             </div>
-            <h1 class="text-7xl">Mr. John Walker</h1>
+            <h1 class="text-3xl sm:text-5xl md:text-7xl">Mr. John Walker</h1>
             <p class="text-gray-500">
                 Profesional en desarrollo web y diseñador UI/UX
             </p>
-            <div class="home__buttons flex gap-2 mt-6">
-                <button class="cursor-pointer border-round-lg">Descargar CV</button>
-                <button class="cursor-pointer border-round-lg">Mi trabajo</button>
+            <div class="home__buttons flex align-items-center gap-2 mt-6">
+                <a href="./assets/CURRICULUM.pdf" class="cursor-pointer border-round-lg no-underline" download>Descargar
+                    CV</a>
+                <a onclick="scrollToSection('portfolio')" class="cursor-pointer border-round-lg no-underline">Mi trabajo</a>
             </div>
-        </section>
-        <!--ABOUT ME-->
-        <section class="about__me w-full min-h-screen flex align-items-center">
-            <div class="aboutMe__content min-h-full flex ">
-                <div class="image col-6 p-0">
-                    <img src="./assets/freelancer.jpg" alt="Foto relacionado a acerca de mí" width="100" height="100" />
-                </div>
-                <div class="aboutMe__info col pt-0 pl-6 pr-6 p-0">
-                    <h1>Sobre mí</h1>
+
+    </section>
+    <!--ABOUT ME-->
+     <section id="about" class="about__me w-full min-h-screen flex align-items-center">
+            <div class="aboutMe__content min-h-full flex flex-column md:flex-row pt-8 md:pt-0">
+                <div class="aboutMe__info col-12 md:col-6 pt-0 xl:pl-6 md:pr-6 p-0">
+                    <h1 class="text-5xl">Sobre mí</h1>
                     <p class="text-gray-500">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
                         corporis eos itaque delectus modi at, ex tempora harum magni id
@@ -85,34 +83,39 @@
                         </div>
                     </div>
                     <div class="hireMe__button pt-4">
-                        <button class="cursor-pointer border-round-lg">Contratame!</button>
+                        <a href="mailTo:john@email.com"
+                            class="cursor-pointer no-underline border-round-lg">Contratame!</a>
                     </div>
+                </div>
+                <div class="image col md:col p-0 mt-6 md:mt-0">
+                    <img src="./assets/freelancer.jpg" alt="Foto relacionado a acerca de mí" width="100" height="100" />
                 </div>
             </div>
         </section>
     </div>
+</div>
 
-        <!--FREE LANCER SECTION -->
-        <section class="freelancer mb-4 mt-4 min-w-full flex flex-column justify-content-center align-items-center">
-            <p class="text-sm">Tienes un proyecto en mente?</p>
-            <h1>Estoy disponible como freelancer</h1>
-            <div class="hireMe__button pt-4">
-                <button class="cursor-pointer border-round-lg">Contratame</button>
-            </div>
-        </section>
+    <!--FREE LANCER SECTION -->
+    <section class="freelancer mb-4 mt-4 min-w-full flex flex-column justify-content-center align-items-center">
+        <p class="text-sm">Tienes un proyecto en mente?</p>
+        <h1 class="text-center ">Estoy disponible como freelancer</h1>
+        <div class="hireMe__button pt-4">
+            <a href="mailTo:john@email.com" class="cursor-pointer no-underline border-round-lg">Escríbeme</a>
+        </div>
+    </section>
     <!--SERVICES -->
     <div class="container">
-        <section class="services min-h-full w-full pb-7">
+        <section id="services" class="services min-h-full w-full pb-7">
             <div class="services__title flex flex-column gap-3 text-center">
-                <h1>Mis servicios</h1>
-                <p class="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, veniam
+                <h1 class="text-5xl">Mis servicios</h1>
+                <p class="text-gray-400 text-sm md:text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, veniam
                     impedit! Porro voluptate
                     veritatis iusto repellat. Laboriosam voluptate accusantium amet qui, neque nesciunt, maxime
                     explicabo ea
                     vero aut maiores praesentium.</p>
             </div>
             <div class="services__cards w-full grid grid-nogutter mt-7 gap-5">
-                <div class="card flex align-items-center col-4 gap-3 p-2">
+                <div class="card flex align-items-center col-12 sm:col-6 md:col-6 lg:col-4 gap-3 p-2">
                     <div class="service__logo flex align-items-center justify-content-center">
                         <i class="fa-brands fa-html5"></i>
                     </div>
@@ -120,7 +123,7 @@
                         <p>HTML</p>
                     </div>
                 </div>
-                <div class="card flex align-items-center col-4 gap-3 p-2">
+                <div class="card flex align-items-center col-12 sm:col lg:col-4 gap-3 p-2">
                     <div class="service__logo flex align-items-center justify-content-center ">
                         <i class="fa-brands fa-wordpress"></i>
                     </div>
@@ -128,7 +131,7 @@
                         <p>Wordpress</p>
                     </div>
                 </div>
-                <div class="card flex align-items-center col gap-3 p-2">
+                <div class="card flex align-items-center col-12 sm:col-6 md:col-3 lg:col gap-3 p-2">
                     <div class="service__logo flex align-items-center justify-content-center ">
                         <i class="fa-brands fa-angular"></i>
                     </div>
@@ -136,7 +139,7 @@
                         <p>Angular</p>
                     </div>
                 </div>
-                <div class="card flex align-items-center col-4 gap-3 p-2">
+                <div class="card flex align-items-center col-12 sm:col md:col lg:col-4 gap-3 p-2">
                     <div class="service__logo flex align-items-center justify-content-center ">
                         <i class="fa-brands fa-react"></i>
                     </div>
@@ -144,7 +147,7 @@
                         <p>React Js</p>
                     </div>
                 </div>
-                <div class="card flex align-items-center col-4 gap-3 p-2">
+                <div class="card flex align-items-center col-12 sm:col-6 md:col-4 lg:col-4 gap-3 p-2">
                     <div class="service__logo flex align-items-center justify-content-center ">
                         <i class="fa-solid fa-mobile-screen-button"></i>
                     </div>
@@ -152,7 +155,7 @@
                         <p>Desarrollo Móvil</p>
                     </div>
                 </div>
-                <div class="card flex align-items-center col gap-3 p-2">
+                <div class="card flex align-items-center col-12 sm:col md:col-4 lg:col gap-3 p-2">
                     <div class="service__logo flex align-items-center justify-content-center ">
                         <i class="fa-solid fa-code"></i>
                     </div>
@@ -164,18 +167,18 @@
         </section>
 
         <!--PORTFOLIO -->
-        <section class="portfolio min-h-full w-full">
+        <section id="portfolio" class="portfolio min-h-full w-full pb-8 pt-8">
             <div class="portfolio__title flex flex-column gap-3 text-center">
-                <h1>Mi trabajo</h1>
-                <p class="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, veniam
+                <h1 class="text-5xl">Mi trabajo</h1>
+                <p class="text-gray-400 text-sm md:text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, veniam
                     impedit! Porro voluptate
                     veritatis iusto repellat. Laboriosam voluptate accusantium amet qui, neque nesciunt, maxime
                     explicabo ea
                     vero aut maiores praesentium.</p>
             </div>
             <div class="portfolio__gallery">
-                <div class="gallery__categories flex justify-content-center mb-5 mt-5">
-                    <ul class="flex list-none gap-3">
+                <div class="gallery__categories  mb-5 mt-5">
+                    <ul class="flex list-none flex-wrap justify-content-center gap-3">
                         <li class="filter-item active" data-filter="all">Todos</li>
                         <li class="filter-item" data-filter="gym">Gimnasio</li>
                         <li class="filter-item" data-filter="tours__Web">Tours web</li>
@@ -253,10 +256,50 @@
                 </div>
             </div>
         </section>
+        <!--FOOTER -->
+        <footer id="contact" class="min-h-full w-full flex grid col-12 lg:flex-row justify-content-center lg:text-center pb-8 pt-8">
+                <div class="social__media col-12 md:col-4 flex flex-column justify-content-between">
+                    <h3>Redes sociales</h3>
+                    <p>Auténtico e innovador.</p>
+                    <p>Desarrollo lo que necesitas, con un enfoque en usabilidad y rendimiento.</p>
+                    <div class="social__mediaIcons mt-5 flex lg:justify-content-center gap-3">
+                        <a href="https://google.com" target="_blank">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="https://google.com" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://google.com" target="_blank">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact col-12 sm:col-6 sm:pt-0 md:pt-2 md:col-4 flex flex-column justify-content-between md:align-items-center">
+                    <h3>Contacto</h3>
+                    <div class="phone__number flex align-items-center gap-2">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>+593 0953284694</p>
+                    </div>
+                    <div class="email flex align-items-center gap-2">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>john@email.com</p>
+                    </div>
+                    <a href="mailTo:john@email.com" class="cursor-pointer text-center col-4 sm:col-6 xl:col-4 mt-3 no-underline border-round-lg">
+                        <span>
+                            <i class="fa-solid fa-message"></i>
+                        </span>Escríbeme
+                    </a>
+                </div>
+                <div class="my__services col-12 sm:col-6 sm:p-0 md:col-4 md:pt-2 flex flex-column justify-content-between md:align-items-center">
+                    <h3>Mis Servicios</h3>
+                    <p>Desarrollo web</p>
+                    <p>Desarrollo móvil</p>
+                    <p>Diseñador UI /UX</p>
+                    <P>Marketing Digital</P>
+                </div>
+        </footer>
     </div>
 
-
-    <!--FOOTER -->
 </body>
 <script>
     const filterContainer = document.querySelector(".gallery__categories");
@@ -278,6 +321,10 @@
             })
         }
     })
+
+    function scrollToSection(sectionId) {
+        document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+    }
 
 </script>
 

@@ -22,9 +22,16 @@ body {
     padding: 0rem 12rem 0 12rem;
 }
 
+@media screen and (max-width:992px){
+    .container{
+        padding: 0 2rem;
+    }
+}
+
 /* ------- HEADER -------- */
 .navbar {
     padding: 0 12rem 0 12rem;
+    background-color: var(--bg-color);
 }
 .logo img {
     width: 120px;
@@ -34,12 +41,14 @@ body {
 
 .header__info ul li {
     padding: 2.5rem 1.2rem 1rem 1.2rem;
+    cursor: pointer;
 }
 
-.hireMe__button button {
+.hireMe__button a {
     background-color: var(--secondary-bg-color);
     color: var(--font-color);
     font-family: var(--font);
+    font-size: small;
     padding: 1rem 1.5rem;
     border-color: unset;
     border-width: 0;
@@ -57,8 +66,6 @@ body {
     position: relative;
     background-image: url(./assets/foto-perfil.png);
     background-repeat: no-repeat;
-    background-size: auto 90%;
-    background-position: 400px bottom;
 }
 .message__bubble {
     display: inline-block;
@@ -84,30 +91,72 @@ body {
     color: var(--font-color);
 }
 
-.home__buttons button:first-child {
+.home__buttons a:first-child {
     background-color: var(--secondary-bg-color);
-    font-family: var(--font);
     font-size: .9rem;
+    color: #fff;
+    padding: 1rem 1.5rem;
 
 }
-.home__buttons button:nth-child(2) {
+.home__buttons a:nth-child(2) {
     background-color: transparent;
-    border-color: #fff;
+    border: 1px solid #fff;
     border-width: thin;
     font-family: var(--font);
     font-size: .9rem;
+    color: #fff;
+    padding: 1rem 1.5rem;
+}
+
+@media screen and (max-width:576px) {
+    .message__bubble{
+        width: 160px;
+    }
+    .home__buttons a{
+        padding: 1rem 1rem !important;
+    }
+    .home__page {
+        background-size: auto 27%;
+        background-position: center bottom;
+    }
+}
+
+@media screen and (min-width:576px) {
+    .home__page {
+        background-size: auto 45%;
+        background-position: 250px bottom;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:992px) {
+    .home__page {
+        background-size: auto 55%;
+        background-position: 400px bottom;
+    }
+}
+
+@media screen and (min-width:1400px) {
+    .home__page {
+        background-size: auto 75%;
+        background-position: 400px bottom;
+
+    }
+}
+
+@media screen and (min-width:1600px) {
+    .home__page {
+        background-size: auto 90%;
+        background-position: 400px bottom;
+    }
 }
 
 /* ------- ABOUT ME -------- */
-
-.about__me{
-    padding-top: 81px;
-}
 
 .about__me .image img{
     height: 100%;
     width: 100%;
     filter: grayscale(1);
+    object-fit: cover;
 }
 
 .progress__bar {
@@ -179,7 +228,7 @@ body {
     cursor: pointer;
 }
 .gallery__categories .filter-item.active{
-    border-bottom: 1px solid yellow;
+    border-bottom: 1px solid var(--secondary-bg-color);
 }
 
 .project__card{
@@ -268,4 +317,35 @@ body {
     background-position: center;
 }
 
+/* ------- FOOTER -------- */
 
+footer{
+    border-top: 2px solid #fff;
+}
+
+:is(.social__media, .contact, .my__services) h3{
+    margin-bottom: 1rem;
+}
+
+:is(.social__media, .contact, .my__services) p,
+:is(.fa-phone, .fa-envelope, .fa-message, .fa-brands){
+    color: #a3a3a3;
+}
+
+.social__mediaIcons .fa-brands{
+    font-size: 2rem;
+    transition: all .2s ease-in;
+    cursor: pointer;
+}
+
+.social__mediaIcons .fa-brands:hover{
+    color: var(--secondary-bg-color);
+}
+.contact a{
+    padding: .5rem 1.8rem;
+    background-color: unset;
+    border: 1px solid var(--secondary-bg-color);
+    font-family: var(--font);
+    font-size: .9rem;
+    color: #a3a3a3;
+}
